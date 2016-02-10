@@ -1,0 +1,16 @@
+<div class="row">
+<div class="col-md-4 col-md-offset-4">
+<h2>New Posts</h2>
+<br>
+
+<%= form_for @post, html: { multipart: true} do |f| %>
+	<%= f.label :image, class: "imagetag" %>
+	<%= f.file_field :image, class: "imagetag"%>
+<br>
+	<%= f.label :desciption %>
+	<%= f.text_area :description %>
+	<br>
+	<%= f.submit class: "submit"%>
+<% end %>
+</div>
+</div>
